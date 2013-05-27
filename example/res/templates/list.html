@@ -1,0 +1,13 @@
+<div class="span12">
+
+	<h2>Added searches list</h2>
+	<div class="no-left-margin" ng-cloak ng-show="searchData.length > 0">
+		<div class="span4" ng-repeat="item in searchData" tweet-list="item" url-index="$index"></div>
+	</div>
+
+	<div ng-hide="searchData.length > 0">
+		<h3>Nothing here!</h3>
+		<p>Go back <a href="#/"><span class="badge badge-success">home</span></a> and add some search terms.</p>
+	</div>
+
+</div>
