@@ -1,4 +1,7 @@
 <div class="media tweet-item">
+	<div class="media-body">
+		<p><span class="badge badge-info">{{ item.date | moment:'DD MMMM YYYY HH:mm:ss' }}</span></p>
+	</div>
 	<a class="pull-left" target="_blank" ng-href="http://twitter.com/{{ item.username }}">
 		<img class="img-polaroid pull-left media-object" ng-src="{{ item.img }}">
 	</a>
