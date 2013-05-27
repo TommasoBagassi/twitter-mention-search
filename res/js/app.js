@@ -82,4 +82,11 @@ var app = angular.module('twitterSearch', ['twitterSearch.form', 'twitterSearch.
 				return text;
 			}
 		}
+	}).
+	//filter for moment date
+	filter('moment', function() {
+		return function(dateString, format) {
+			format = format || 'DD MMMM';
+	        return moment(dateString).format(format);
+	    };
 	});
