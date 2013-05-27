@@ -19,12 +19,6 @@
 		<div class="no-left-margin" ng-cloak ng-show="item.tweets.length > 0">
 			<div class="span4" ng-repeat="tweet in item.tweets" tweet-item="tweet"></div>
 		</div>
-		<div class="clearfix" style="padding:10px 0;">
-			<div class="btn-group">
-				<button class="btn" ng-click="refreshView(item.previous_page, item.count)" ng-cloak ng-show="item.previous_page != ''"><i class="icon-arrow-left"></i> Previous page</button>
-				<button class="btn" ng-click="refreshView(item.next_page, item.count)" ng-cloak ng-show="item.next_page != ''"><i class="icon-arrow-right"></i> Next page</button>
-			</div>
-		</div>
 	</div>
 
 	<div ng-switch-when="true">
