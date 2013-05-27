@@ -1,4 +1,4 @@
-twitter-mention-search
+Twitter Mention Search
 ======================
 
-Twitter mention search
+AngularJS example of Twitter API usage.
