@@ -1,0 +1,48 @@
+/* 
+  Allow angular.js to be loaded in body, hiding cloaked elements until 
+  templates compile.  The !important is important given that there may be 
+  other selectors that are more specific or come later and might alter display.  
+ */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+	display: none !important;
+}
+
+body {
+	padding-top: 40px;
+}
+
+.media {
+	padding: 10px 0 20px;
+}
+
+.no-left-margin [class*='span']:nth-child(3n+1) {
+	margin-left: 0px;
+}
+
+.tweet-item {
+	max-height: 180px;
+}
+
+.tweet-item .media-text {
+	height: 150px;
+}
+
+.tweet-item .media-text p {
+	padding: 5px;
+}
+
+.media-heading a:hover {
+	text-decoration: none;
+}
+
+.tweet-list {
+	max-height: 120px;
+}
+
+.tweet-list .media-text {
+	height: 90px;
+}
+
+.tweet-list .media-text p {
+	padding: 5px;
+}

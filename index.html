@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>Twitter Search - AngularJS</title>
+        
+        <meta name="description" content="" />
+        
+		<!-- StyleSheets -->
+		<link rel="stylesheet" type="text/css" href="res/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="res/css/custom.css" />
+
+    </head>
+    
+    <body ng-app="twitterSearch">
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#/">Twitter Search</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="">
+                                <a href="#/">Home</a>
+                            </li>
+                            <li class="">
+                                <a href="#/list">Search list</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    	<div class="container">
+
+    		<div class="row">
+    			<div class="span12">
+                    <div class="hero-unit">
+    				    <h1>Twitter Search</h1>
+                        <p>Insert search terms and fetch the latest mentions from Twitter's public API.</p>
+                    </div>
+    			</div>
+    		</div>
+
+            <div class="row" ng-view></div>
+
+    	</div>
+
+		<!-- Javascript -->
+		<script type="text/javascript" src="res/libs/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="res/libs/underscore-min.js"></script>
+		<script type="text/javascript" src="res/libs/angular.min.js"></script>
+		<script type="text/javascript" src="res/libs/moment.min.js"></script>
+		<script type="text/javascript" src="res/libs/bootstrap.min.js"></script>
+
+        <!-- app -->
+        <script type="text/javascript" src="res/js/app.js"></script>
+		<script type="text/javascript" src="res/js/services.js"></script>
+        <script type="text/javascript" src="res/js/directives.js"></script>
+        <script type="text/javascript" src="res/js/controllers.js"></script>
+    </body>
+</html>

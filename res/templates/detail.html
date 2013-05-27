@@ -1,0 +1,35 @@
+<div class="span12" ng-switch on="notHere">
+
+	<div ng-switch-when="false">
+		<h4>Search results for:</h4>
+		<h2>{{ item.query | ucf }}</h2>
+		<div style="padding:0 0 10px;">
+			<div class="btn-group">
+				<button class="btn" ng-click="refreshView(item.refresh, item.count)"><i class="icon-refresh"></i> Refresh search</button>
+				<button class="btn btn-danger" ng-click="deleteItem()"><i class="icon-ban-circle icon-white"></i> Delete this search</button>
+			</div>
+		</div>
+		<div style="padding:10px 0;">
+			<h5>Page {{ item.page }} <small>(items per page: {{ item.count }})</small></h5>
+			<div class="btn-group">
+				<button class="btn" ng-click="refreshView(item.previous_page, item.count)" ng-cloak ng-show="item.previous_page != ''"><i class="icon-arrow-left"></i> Previous page</button>
+				<button class="btn" ng-click="refreshView(item.next_page, item.count)" ng-cloak ng-show="item.next_page != ''"><i class="icon-arrow-right"></i> Next page</button>
+			</div>
+		</div>
+		<div class="no-left-margin" ng-cloak ng-show="item.tweets.length > 0">
+			<div class="span4" ng-repeat="tweet in item.tweets" tweet-item="tweet"></div>
+		</div>
+		<div class="clearfix" style="padding:10px 0;">
+			<div class="btn-group">
+				<button class="btn" ng-click="refreshView(item.previous_page, item.count)" ng-cloak ng-show="item.previous_page != ''"><i class="icon-arrow-left"></i> Previous page</button>
+				<button class="btn" ng-click="refreshView(item.next_page, item.count)" ng-cloak ng-show="item.next_page != ''"><i class="icon-arrow-right"></i> Next page</button>
+			</div>
+		</div>
+	</div>
+
+	<div ng-switch-when="true">
+		<h3>Nothing here!</h3>
+		<p>Go back <a href="#/"><span class="badge badge-success">home</span></a> and add some search terms.</p>
+	</div>
+
+</div>

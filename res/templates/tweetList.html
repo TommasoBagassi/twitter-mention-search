@@ -1,0 +1,12 @@
+<div class="media tweet-list">
+	<div class="media-body">
+		<h4 class="media-heading well well-small">Search results: {{ item.query | ucf }}</h4>
+	</div>
+	<div class="media-body media-text">
+		<p>Results/Results per page: <strong>{{ item.tweets.length }}/{{ item.count }}</strong></p>
+		<div class="btn-group">
+			<a class="btn btn-primary" ng-href="#/detail/{{ index }}"><i class="icon-check icon-white"></i> View results</a>
+			<a class="btn btn-danger" ng-click="deleteItem()"><i class="icon-ban-circle icon-white"></i> Delete this search</a>
+		</div>
+	</div>
+</div>

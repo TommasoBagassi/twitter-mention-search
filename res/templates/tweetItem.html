@@ -1,0 +1,14 @@
+<div class="media tweet-item">
+	<a class="pull-left" target="_blank" ng-href="http://twitter.com/{{ item.username }}">
+		<img class="img-polaroid pull-left media-object" ng-src="{{ item.img }}">
+	</a>
+	<div class="media-body">
+		<h4 class="media-heading well">
+			<a target="_blank" ng-href="http://twitter.com/{{ item.username }}">{{ item.name }}
+			<br /><small>({{ item.username }})</small></a>
+		</h4>
+	</div>
+	<div class="media-body media-text">
+		<p ng-bind-html-unsafe="item.text | findURLs | findHashtags | findUsernames"></p>
+	</div>
+</div>
